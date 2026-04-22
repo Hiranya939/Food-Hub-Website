@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Food Hub | Hiranya Das</title>
+
+<style>
+*{margin:0;padding:0;font-family:'Segoe UI';box-sizing:border-box;}
+
+body{
+background:linear-gradient(135deg,#0f2027,#24414b,#2c5364);
+color:white;
+}
+
+/* NAVBAR */
+nav{
+background:#0a0a0a;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+nav button{
+margin:5px;
+padding:10px 18px;
+border:none;
+background:#c11b2e;
+color:white;
+cursor:pointer;
+border-radius:20px;
+transition:0.3s;
+}
+
+nav button:hover{background:#ff512f;}
+
+/* PAGES */
+.page{display:none;padding:30px;text-align:center;}
+.active{display:block;}
+
+/* BACKGROUNDS */
+#home{background:radial-gradient(circle,#4a4040,#0c889b);}
+#fast{background:radial-gradient(circle,#ff416c,#12475900);}
+#drink{background:radial-gradient(circle,#26998c,#90656e);}
+#dessert{background:radial-gradient(circle,#41444bde,#1ad51d2a);}
+
+/* CARDS */
+.card{
+display:inline-block;
+background:white;
+color:black;
+padding:15px;
+margin:15px;
+width:220px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.card:hover{transform:scale(1.05);}
+
+.card img{
+width:100%;
+height:140px;
+border-radius:12px;
+object-fit:cover;
+}
+
+/* INPUT */
+input{
+padding:10px;
+margin:10px;
+width:250px;
+border-radius:8px;
+border:none;
+}
+
+/* BUTTON */
+button{
+padding:8px 12px;
+margin:5px;
+border:none;
+cursor:pointer;
+border-radius:8px;
+background:#ff7e5f;
+color:white;
+}
+
+/* CART */
+.cart{
+background:rgba(133, 104, 66, 0.449);
+color:rgb(41, 189, 171);
+margin:20px;
+padding:20px;
+border-radius:15px;
+}
+
+/* FOOTER */
+footer{
+background:#000;
+color:white;
+padding:20px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<button onclick="show('home')">Home</button>
+<button onclick="show('fast')">Fast Food</button>
+<button onclick="show('drink')">Drinks</button>
+<button onclick="show('dessert')">Dessert</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page active">
+
+<!-- HERO -->
+<div style="padding:40px;background:radial-gradient(circle,#62c32181,#12afbd);border-radius:20px;margin-bottom:30px;">
+<h1>🍽 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗙𝗼𝗼𝗱 𝗛𝘂𝗯</h1>
+<p>𝗗𝗲𝗹𝗶𝗰𝗶𝗼𝘂𝘀 𝗳𝗼𝗼𝗱 🍔 𝗱𝗲𝗹𝗶𝘃𝗲𝗿𝗲𝗱 𝘁𝗼 𝘆𝗼𝘂𝗿 𝗱𝗼𝗼𝗿𝘀𝘁𝗲𝗽🚀🏠</p>
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+style="width:90%;max-width:600px;border-radius:15px;margin-top:15px;">
+</div>
+
+<!-- FEATURES -->
+<div style="background:rgb(130, 29, 29);color:rgb(27, 204, 198);padding:20px;border-radius:20px;margin-bottom:30px;">
+<h2>✨ Why Choose Us?</h2>
+
+<div class="card"><h3>⚡ Fast Delivery</h3><p>30 min delivery</p></div>
+<div class="card"><h3>🍴 Quality Food</h3><p>Fresh food</p></div>
+<div class="card"><h3>💳 Easy Payment</h3><p>Secure checkout</p></div>
+<div class="card"><h3>📞 24/7 Support</h3><p>Always available</p></div>
+</div>
+
+<!-- DELIVERY -->
+<div style="background:radial-gradient(circle,#711753,#73838b);padding:25px;border-radius:20px;margin-bottom:30px;">
+<h2>🚚 Home Delivery</h2>
+<p>Fast and safe delivery at your home</p>
+
+<img src="https://images.unsplash.com/photo-1600891963935-6c0f4b9a9c7d"
+style="width:90%;max-width:500px;border-radius:15px;margin-top:15px;">
+</div>
+
+<!-- ADDRESS -->
+<div style="background:radial-gradient(circle,#5b7774,#766978);color:rgb(36, 35, 42);padding:25px;border-radius:20px;margin-bottom:30px;">
+<h2>📍 Enter Delivery Address</h2>
+
+<input type="text" placeholder="Full Name"><br>
+<input type="text" placeholder="Address"><br>
+<input type="text" placeholder="Phone Number"><br>
+
+<button>Save Address</button>
+</div>
+
+<!-- POPULAR -->
+<div style="background:linear-gradient(135deg,#ff416c,#ff4b2b);padding:25px;border-radius:20px;">
+<h2>🍔 Popular Foods</h2>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<h3>Burger</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<h3>Pizza</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307">
+<h3>Milkshake</h3>
+</div>
+
+</div>
+
+<br>
+<button onclick="show('fast')">Explore Menu →</button>
+</div>
+
+<!-- FAST FOOD -->
+<div id="fast" class="page">
+<div class="card"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349"><h3>Burger</h3><p>₹150</p><button onclick="add('Burger',150)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"><h3>Pizza</h3><p>₹200</p><button onclick="add('Pizza',200)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"><h3>Sandwich</h3><p>₹120</p><button onclick="add('Sandwich',120)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349"><h3>Hot Dog</h3><p>₹130</p><button onclick="add('Hot Dog',130)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5"><h3>Fries</h3><p>₹100</p><button onclick="add('Fries',100)">Add</button></div>
+</div>
+
+<!-- DRINKS -->
+<div id="drink" class="page">
+<div class="card"><img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=400"><h3>Juice</h3><p>₹120</p><button onclick="add('Juice',120)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"><h3>Coffee</h3><p>₹90</p><button onclick="add('Coffee',90)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13"><h3>Cold Drink</h3><p>₹80</p><button onclick="add('Cold Drink',80)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307"><h3>Milkshake</h3><p>₹140</p><button onclick="add('Milkshake',140)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6"><h3>Tea</h3><p>₹60</p><button onclick="add('Tea',60)">Add</button></div>
+</div>
+
+<!-- DESSERT -->
+<div id="dessert" class="page">
+<div class="card"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"><h3>Cake</h3><p>₹180</p><button onclick="add('Cake',180)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b"><h3>Donut</h3><p>₹70</p><button onclick="add('Donut',70)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb"><h3>Ice Cream</h3><p>₹90</p><button onclick="add('Ice Cream',90)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c"><h3>Brownie</h3><p>₹110</p><button onclick="add('Brownie',110)">Add</button></div>
+</div>
+
+<!-- CART -->
+<div class="cart">
+<h2>🛒 Cart</h2>
+<div id="cart"></div>
+<h3>Total ₹<span id="total">0</span></h3>
+<button onclick="placeOrder()">Place Order</button>
+<button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<!-- SUCCESS -->
+<div id="orderPage" class="page">
+<h1>✅ Order Placed Sucessfully!</h1>
+<h2>Thank You for Purchasing</h2>
+<button onclick="show('home')">Back Home</button>
+</div>
+
+<footer>
+<p>© 2026 Food Hub</p>
+<p>Developed by Hiranya Das</p>
+<p>Contact: 9395216002</p>
+<p>Email id: dashiranya753@gmail.com</p>
+</footer>
+
+<script>
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+
+function show(id){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+}
+
+function add(name,price){
+let f=cart.find(c=>c.name===name);
+if(f)f.qty++; else cart.push({name,price,qty:1});
+save();
+}
+
+function save(){
+localStorage.setItem("cart",JSON.stringify(cart));
+render();
+}
+
+function render(){
+let box=document.getElementById("cart");
+let total=0;
+box.innerHTML="";
+
+cart.forEach((c,i)=>{
+total+=c.price*c.qty;
+box.innerHTML+=`<p>${c.name} ₹${c.price} x ${c.qty}
+<button onclick="change(${i},1)">+</button>
+<button onclick="change(${i},-1)">-</button>
+<button onclick="removeItem(${i})">X</button></p>`;
+});
+
+document.getElementById("total").innerText=total;
+}
+
+function change(i,val){
+cart[i].qty+=val;
+if(cart[i].qty<=0)cart.splice(i,1);
+save();
+}
+
+function removeItem(i){
+cart.splice(i,1);
+save();
+}
+
+function clearCart(){
+cart=[];
+save();
+}
+
+function placeOrder(){
+if(cart.length===0){alert("Cart empty");return;}
+cart=[];
+localStorage.removeItem("cart");
+render();
+show("orderPage");
+}
+
+render();
+</script>
+
+</body>
+</html>
