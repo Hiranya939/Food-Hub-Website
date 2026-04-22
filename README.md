@@ -1,4 +1,4 @@
-🍔 Food Hub Website 🍟
+#🍔 Food Hub Website 🍟
 The **Food Hub Website** is a modern web-based online food ordering system developed using HTML, CSS, and JavaScript. This project is designed to replicate the basic functionality of real-world food delivery platforms by providing a simple, interactive, and user-friendly interface where users can browse food items, manage their cart, and place orders efficiently.
 
 The system is structured into multiple sections such as Home, Fast Food, Drinks, and Dessert. Each section is carefully designed to display food items in an organized and visually appealing way using card-based layouts. Users can easily navigate between these sections, explore available items, and interact with the system smoothly.
